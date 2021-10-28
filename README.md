@@ -1,6 +1,6 @@
 # Energy Star Night Bot 2021
 
-A bot to automize the gathering of a ticket for the Energy Air festival
+A bot to automize the gathering of a ticket for the Energy Star Night
 
 ## Installation
 
@@ -27,6 +27,7 @@ https://github.com/dessant/buster
 
 ## FLAGS
 Energy Air won't flag you for using this bot.
+They think they are safe with reCAPTCHA. Their not.
 Multiple people has gained alot of tickets with this bot with thousands of attempts.
 Don't worry. It takes time.
 
