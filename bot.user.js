@@ -82,6 +82,7 @@ $(document).ready(function() {
     function restartGame () {
         console.log('restart')
         $('button#lose').trigger('click');
+        location.reload()
         setTimeout(makeAction, randomNumber())
     }
 
@@ -109,6 +110,9 @@ $(document).ready(function() {
     }
 
     function makeAction () {
+        if (run >= 15) {
+            location.reload()
+        }
         bypassCaptcha()
         if (document.getElementById('lose')){
             console.clear()
