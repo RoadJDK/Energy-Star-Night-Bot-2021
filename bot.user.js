@@ -12,6 +12,7 @@
 // @grant        GM_xmlhttpRequest
 // ==/UserScript==
 $(document).ready(function() {
+    var run = 0;
 
     const questions = {
         "WAS FÜR EIN INSTRUMENT SPIELT ASH?":"E-Gitarre",
@@ -24,23 +25,23 @@ $(document).ready(function() {
         "WER ÜBERZEUGT DEN GROSSEN STAR CLAY CALLOWAY, AN DER SHOW TEILZUNEHMEN?":"Ash",
         "WELCHER ACT WAR NOCH NIE AN DER ENERGY STAR NIGHT DABEI?":"Loredana",
         "WAS FÜR EIN WORT MUSST DU PER SMS SCHICKEN, UM TICKETS ZU GEWINNEN?":"STAR",
-        "WEN HAT HERR BÜNZLI AN SEINER ERSTEN ENERGY STAR NIGHT 2017 INTERVIEWT?":"Anastacia & Mark Forster",
-        "WELCHES DJ-DUO RIESS 2016 DAS HALLENSTADION AB?":"Remady & Manu L",-
         "WIE HEISST DIE FRAU VON HERR BÜNZLI?":"Anegret",
         "WAS WAR DAS BESONDERE AN DER ÜBERGABE DES ENERGY MUSIC AWARD 2020?":"Wir haben Loco Escrito bei der Übergabe geprankt",
         "WELCHER AWARD WIRD IM RAHMEN DER ENERGY STAR NIGHT VERLIEHEN?":"Der Energy Music Award",
         "WIE HEISST DER OFFIZIELLE INSTAGRAM ACCOUNT DER ENERGY STAR NIGHT?":"@energystarnight",
         "WER SPRICHT DIE ORIGINALSTIMME VON CLAY CALLOWAY?":"Bono",
         "WAS IST ENERGY ONE?":"Die Membership von Energy",
+        "WELCHES DJ-DUO RIESS 2016 DAS HALLENSTADION AB?":"Remady &amp; Manu L",
+        "WEN HAT HERR BÜNZLI AN SEINER ERSTEN ENERGY STAR NIGHT 2017 INTERVIEWT?":"Anastacia &amp; Mark Forster ",
         "WELCHER SCHWEIZER ACT HAT 2019 DEN ENERGY MUSIC AWARD GEWONNEN?":"Luca Hänni",
         "WIE ALT MUSS MAN SEIN, UM OHNE ERWACHSENE BEGLEITUNG AN DER ENERGY STAR NIGHT TEILZUNEHMEN?":"14",
         "WELCHE ZWEI ACTS LASEN AN DER ESN18 BACKSTAGE MEAN TWEETS?":"Olly Murs und James Arthur",
         "AN DER ENERGY STAR NIGHT 2019 HABEN WIR DAS GRÖSSTE TIKTOK-VIDEO MIT 13'000 LEUTEN GEMACHT. WAS FÜR EINE CHALLENGE WAR ES?":"WOKEUPLIKETHISCHALLENGE",
         "WAS WAR DAS THEMA DER LETZTEN ENERGY STAR NIGHT?":"WELCOME TO THE CANDY FACTORY",
         "WELCHER ACT ERÖFFNETE DIE ENERGY STAR NIGHT 2019?":"Tom Gregory",
+        "WELCHER YOUTUBE STAR JAMMTE BEIM ENERGY AIR 2017 2017 BACKSTAGE MIT SAMU VON SUNRISE AVENUE? ":"Alex Aiono",
         "WELCHER U2-SONG WIRD IM TRAILER VON SING – DIE SHOW DEINES LEBENS GESPIELT?":"I Still Haven’t Found What I’m Looking For",
         "WO FINDET DIE AFTERSHOW PARTY STATT?":"Hiltl Club",
-        "WELCHER YOUTUBE STAR JAMMTE BEIM ENERGY AIR 2017 2017 BACKSTAGE MIT SAMU VON SUNRISE AVENUE?":"Alex Aiono",
         "IN WELCHEM JAHR WURDE DAS ENERGY STARS FOR FREE ZUR ENERGY STAR NIGHT?":"2016",
         "WANN BEGINNT DIE ENERGY STAR NIGHT?":"19:00",
         "WELCHER ACT WAR AM ERSTEN ENERGY STARS FOR FREE UND SCHON WEITERE SECHS MAL DABEI?":"Stress",
@@ -50,13 +51,11 @@ $(document).ready(function() {
         "WIE HEISST DIE TOCHTER DES SHOW MANAGERS?":"Porsha",
         "WANN WIRD DIE ENERGY STAR NIGHT STATTFINDEN?":"19. November 2021",
         "SEIT WANN IST ENERGY LUZERN LIVE ON AIR?":"August 2021",
+        "WER HAT DEN ERSTEN ENERGY MUSIC AWARD GEWONNEN?":"Manillo",
+        "WO FINDET DIE ENERGY STAR NIGHT STATT?":"Im Hallenstadion Zürich",
+        "WO FINDET DIE NEUE MUSIK-SHOW STATT?":"Redshore City",
+        "WELCHER HERAUSFORDERUNG MUSS SICH ROSITA IN DER SHOW STELLEN?":"An einem Seil in die Tiefe springen",
         "Question":"Answer",
-        "Question":"Answer",
-        "Question":"Answer",
-        "Question":"Answer",
-        "Question":"Answer",
-        "Question":"Answer",
-        
     }
 
     function randomNumber () {
@@ -112,6 +111,9 @@ $(document).ready(function() {
     function makeAction () {
         bypassCaptcha()
         if (document.getElementById('lose')){
+            console.clear()
+            console.log('run: ' + run)
+            run = run + 1
             restartGame()
         } else if (document.getElementsByTagName('h3')[0].innerText == 'DU HAST DIE ERSTE HÜRDE GESCHAFFT.\nUM WELCHEN PREIS MÖCHTEST DU SPIELEN?'){
             decisionTicket()
