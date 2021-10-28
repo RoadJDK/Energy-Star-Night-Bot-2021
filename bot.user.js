@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Energy Air 2021 Game Bot
-// @namespace    https://github.com/RoadJDK/Energy-Star-Night-2021-Bot/blob/main/bot.user.js
+// @namespace    https://github.com/RoadJDK/Energy-Star-Night-Bot-2021/blob/main/bot.user.js
 // @version      1.0
 // @description  Win tickets for the Energy Air 2021
 // @author       RoadJDK: https://github.com/RoadJDK, ggmanugg: https://github.com/ggmanugg
