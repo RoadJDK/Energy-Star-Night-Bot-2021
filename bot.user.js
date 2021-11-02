@@ -12,7 +12,7 @@
 // @grant        GM_xmlhttpRequest
 // ==/UserScript==
 $(document).ready(function() {
-    var run = 0;
+    var runCount = 0;
 
     const questions = {
         "WAS FÜR EIN INSTRUMENT SPIELT ASH?":"E-Gitarre",
@@ -110,14 +110,14 @@ $(document).ready(function() {
     }
 
     function makeAction () {
-        if (run >= 15) {
+        if (runCount >= 15) {
             location.reload()
         }
         bypassCaptcha()
         if (document.getElementById('lose')){
             console.clear()
-            console.log('run: ' + run)
-            run = run + 1
+            console.log('run: ' + runCount)
+            runCount = runCount + 1
             restartGame()
         } else if (document.getElementsByTagName('h3')[0].innerText == 'DU HAST DIE ERSTE HÜRDE GESCHAFFT.\nUM WELCHEN PREIS MÖCHTEST DU SPIELEN?'){
             decisionTicket()
