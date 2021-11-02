@@ -32,7 +32,7 @@ Multiple people has gained alot of tickets with this bot with thousands of attem
 Don't worry. It takes time.
 
 ## Success Rate
-Tickets won with this bot (confirmed): (unknown)
+Tickets won with this bot (confirmed): 12
 
 ## Credits
 
